@@ -1,0 +1,62 @@
+body {
+	background-color: #9d8c84;
+}
+
+#wrapper {
+	width: 1160px;
+	margin: auto;
+	background-color: white;
+	padding: 10px;
+	border-radius: 5%;
+}
+
+#generator {
+	width: 960px;
+	margin: auto;
+	padding-bottom: 5px;
+}
+
+form {
+	display: inline-block;
+}
+
+input {
+	height: 20px;
+	width: 200px;
+}
+
+#button {
+	display: inline-block;
+    height:20px;
+	width:70px;
+	background-color:#cc0000;
+	font-family:arial;
+	font-weight:bold;
+	color:#ffffff;
+	border-radius: 5px;
+	text-align:center;
+}
+
+#grid {
+	border: 1px solid black;
+	height: 960px;
+	width: 960px;
+	margin: auto;
+}
+
+.line {
+	display:inline-block;
+	vertical-align: top;
+}
+
+.block {
+	border: 1px solid blue;
+	display: none;
+	margin-bottom: 0;
+	padding: 0;
+	vertical-align: top;
+}
+
+.visible {
+	display: inline-block;
+}

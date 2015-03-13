@@ -1,0 +1,48 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="etch-a-sketch.css">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
+</head>
+<body>
+<div id="wrapper">
+	<div id="generator">
+		<h1>Grid Generator</h1>
+		<form name="dimensionsForm">
+			<input type="text" name="dimensionsItem">
+		</form>
+		<div id="button">Create</div>
+	</div>
+		<div id="grid">
+		</div>
+<script>
+	$('#button').click(function() {
+		$('#grid').empty();
+		var gridSize = $('input[name=dimensionsItem]').val();
+		if (gridSize <= 64) {
+			alert("Set Grid Size to" + " " + gridSize);
+			for (i = 1; i <= gridSize; i++) {
+				$('#grid').append("<div class='line'><div class='block'></div></div><br>");
+			};
+			for (i = 1; i < gridSize; i++) {
+				$('.line').prepend("<div class='block'></div>");
+			};
+			var blockSize = 960/gridSize - 2;
+		} else {
+			alert("Please set to a size smaller than 65");
+		}
+		$('.block').css("width", blockSize);
+		$('.block').css("height", blockSize);
+		$('.block').addClass('visible');
+		$('.block').on('mouseenter', function() {
+			$(this).css("background-color", "blue");
+		});
+		$('.block').on('mouseleave', function() {
+			$(this).css("background-color", "red");
+		});
+});
+		</script>
+</div>
+</body>
+</html>
